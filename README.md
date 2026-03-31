@@ -54,3 +54,36 @@ binds {
     Mod+A { spawn "sh" "-c" "~/.config/niri/scripts/choose-animation.sh"; }
 }
 ```
+
+## Mangwc Layout Switcher
+
+This script automates layout management by interfacing with `mmsg` and providing a visual selection menu via `fuzzel`.
+
+### Core Functionality
+* [cite_start]**Context Awareness**: The script identifies the currently focused monitor and retrieves the active layout to display it directly in the search prompt[cite: 1].
+* [cite_start]**Fuzzy Search Interface**: It pipes a predefined list of 11 layouts (including Scroller, Grid, and Monocle) into `fuzzel` for quick filtering[cite: 1, 2].
+* [cite_start]**Dynamic Application**: Once a selection is made, the script extracts the specific layout short-code and applies it via the `mmsg -l` command[cite: 3].
+
+### Supported Layouts
+[cite_start]The following layouts are available for selection within the script[cite: 1]:
+
+| Code | Layout | Code | Layout |
+| :--- | :--- | :--- | :--- |
+| **S** | Scroller | **RT** | Right Tile |
+| **T** | Tile | **VS** | Vertical Scroller |
+| **G** | Grid | **VG** | Vertical Grid |
+| **M** | Monocle | **VK** | Vertical Deck |
+| **K** | Deck | **TG** | TGMix |
+| **CT** | Center Tile | | |
+
+### Requirements
+* [cite_start]**mangwc**: Must be running to utilize the `mmsg` command-line tool[cite: 1].
+* [cite_start]**fuzzel**: Required for the dmenu-style selection interface[cite: 2].
+* **Standard Utilities**: `grep`, `cut`, and `printf`.
+
+### Integration Tip
+To make layout switching seamless, you can bind this script to a key combination within your compositor configuration:
+```bash
+# Example binding (pseudo-code)
+bind = Mod4, Space, spawn, /path/to/layout-switch.bash
+```
