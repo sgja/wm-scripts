@@ -60,12 +60,12 @@ binds {
 This script automates layout management by interfacing with `mmsg` and providing a visual selection menu via `fuzzel`.
 
 ### Core Functionality
-* [cite_start]**Context Awareness**: The script identifies the currently focused monitor and retrieves the active layout to display it directly in the search prompt[cite: 1].
-* [cite_start]**Fuzzy Search Interface**: It pipes a predefined list of 11 layouts (including Scroller, Grid, and Monocle) into `fuzzel` for quick filtering[cite: 1, 2].
-* [cite_start]**Dynamic Application**: Once a selection is made, the script extracts the specific layout short-code and applies it via the `mmsg -l` command[cite: 3].
+* **Context Awareness**: The script identifies the currently focused monitor and retrieves the active layout to display it directly in the search prompt.
+* **Fuzzy Search Interface**: It pipes a predefined list of 11 layouts (including Scroller, Grid, and Monocle) into `fuzzel` for quick filtering.
+* **Dynamic Application**: Once a selection is made, the script extracts the specific layout short-code and applies it via the `mmsg -l` command.
 
 ### Supported Layouts
-[cite_start]The following layouts are available for selection within the script[cite: 1]:
+The following layouts are available for selection within the script:
 
 | Code | Layout | Code | Layout |
 | :--- | :--- | :--- | :--- |
@@ -77,8 +77,8 @@ This script automates layout management by interfacing with `mmsg` and providing
 | **CT** | Center Tile | | |
 
 ### Requirements
-* [cite_start]**mangwc**: Must be running to utilize the `mmsg` command-line tool[cite: 1].
-* [cite_start]**fuzzel**: Required for the dmenu-style selection interface[cite: 2].
+* **mangwc**: Must be running to utilize the `mmsg` command-line tool.
+* **fuzzel**: Required for the dmenu-style selection interface.
 * **Standard Utilities**: `grep`, `cut`, and `printf`.
 
 ### Integration Tip
